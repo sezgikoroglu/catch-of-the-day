@@ -21,8 +21,8 @@ const Inventory=()=>{
     const fishes    =useSelector((state) => state.list.items);
     const orderlist = useSelector((state) => state.order.items);
     const [menuItem,setMenuItem]=useState(initialItem);
-    console.log(fishes)
-
+    
+    console.log(orderlist)
     const handleInput=(e)=>{
        setMenuItem({...menuItem,[e.target.name]:e.target.value,id:(fishes.length+1)})
     }
@@ -33,21 +33,22 @@ const Inventory=()=>{
     }
 
     const changeItem=(e,item,index)=>{
-        console.log(e.target.value)
+        
         let updatedItem={...item, [e.target.name]: e.target.value }
+        console.log(updatedItem)
         let newList=[...fishes]
         newList[index]={...updatedItem}
         dispatch(addItemToList(newList))
-
+        
         if (orderlist.some(x=>x.id === item.id)){
             const updatedItemIndex = orderlist.findIndex(
                 (x) => x.id === item.id
               );
-            let newList=[...orderlist]
-            newList[updatedItemIndex]={...updatedItem}
-            dispatch(addItemToOrder(newList))
-            
+            let newList2=[...orderlist]
+           newList2[updatedItemIndex]={...newList2[updatedItemIndex],[e.target.name]: e.target.value}
+           dispatch(addItemToOrder(newList2))
         }
+        
     }
 
 
@@ -81,6 +82,9 @@ const Inventory=()=>{
                 <button onClick={addToItem}>+ ADD ITEM</button>
               
             </div>
+
+            
+
         </div>
         
     )

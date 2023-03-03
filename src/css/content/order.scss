@@ -18,5 +18,25 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .order-li{
+            border-bottom: 1px solid black;
+            font-weight: 500;
+            padding: 1.5rem 0;
+
+            .price{
+                position: absolute;
+                right: 0;
+            }
+        }
     }
+}
+
+.x{
+    margin-left: 8px;
+    background:none;
+    cursor: pointer;
+&:hover{
+    transform: scale(1.2);
+}
 }

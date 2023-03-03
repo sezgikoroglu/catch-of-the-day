@@ -2,7 +2,7 @@
     display: -webkit-box;
     display: flex;
     height: 90vh;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
     margin-top: 5vh;
     -webkit-perspective: 1000px;
@@ -29,6 +29,7 @@
 }
 
 .menu {
+    margin-left: 2.7rem;
     flex-shrink: 1;
     flex-basis: 50%;
     -webkit-transform: translateX(50%) rotateY(6deg) translateX(-50%);
@@ -160,6 +161,12 @@
             &:hover{
                 background-color: #000;
                 color: white;
+                
+            }
+            &:disabled{
+                cursor:not-allowed;
+                background-color: white;
+                color: #d12028;
             }
             }
             .soldout-btn{
