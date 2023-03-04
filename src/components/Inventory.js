@@ -22,7 +22,6 @@ const Inventory=()=>{
     const orderlist = useSelector((state) => state.order.items);
     const [menuItem,setMenuItem]=useState(initialItem);
     
-    console.log(orderlist)
     const handleInput=(e)=>{
        setMenuItem({...menuItem,[e.target.name]:e.target.value,id:(fishes.length+1)})
     }

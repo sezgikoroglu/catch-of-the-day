@@ -12,10 +12,6 @@ const Order = () => {
     setSelect(item.id);
   }
 
-  useEffect(()=>{
-    localStorage.setItem(("orderlist"),JSON.stringify(orderlist))
-  },orderlist)
-
   return (
     <div className="order">
       <h2>Your Order</h2>

@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItemToOrder,
-  addItemToList,
   setLength,
 } from "../store/order/orderSlice";
+import { addItemToList } from "../store/list/listSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,7 @@ const Header = () => {
     const neworder=[...orderlist];
    
   }, fishes);
+
 
   return (
     <div className="menu">
