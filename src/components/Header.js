@@ -14,7 +14,7 @@ const Header = () => {
   useEffect(() => {
     const neworder=[...orderlist];
    
-  }, fishes);
+  }, [fishes]);
 
 
   return (
