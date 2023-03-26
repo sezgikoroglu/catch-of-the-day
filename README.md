@@ -1,4 +1,4 @@
-#Catch-of-the-Day
+# Catch-of-the-Day
 
 JS-React-Redux-SCSS
 
